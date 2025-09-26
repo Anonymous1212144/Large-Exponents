@@ -9,3 +9,6 @@ You might have the preposterous thought that this is not a common occurance, but
 Also, the chance is around 1 in 10<sup>10<sup>83</sup></sup>:
 - https://ourworldindata.org/the-future-is-vast
 - https://www.livescience.com/how-many-atoms-in-universe.html
+
+# Notes
+MSVC compiler does not support `long double`, so the mantissa is limited to 52 bits. If you find another compiler for this program you can get better precision without altering it (like some supports 63-bit mantissa). I estimate the output precision is around 13 digits, so by default it only prints 12 decimal places, but you can get the program to output more by doing `pow <num of decimal places>`. E.g. `pow 20` will output 20 decimal places.
